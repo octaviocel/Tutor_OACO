@@ -11,7 +11,7 @@
 		class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
 		<div class="position-sticky pt-3 sidebar-sticky">
 			<ul class="nav flex-column">
-				<li class="nav-item"><a class="nav-link" id="dahs" onclick="activar(1)"
+				<li class="nav-item"><a class="nav-link ${param.menuActivo == 'dash' ? 'active' : ''}" id="dahs" 
 					aria-current="page" href="<%=request.getContextPath()%>/usuario/dashboard.jsp"> <svg
 							xmlns="http://www.w3.org/2000/svg" width="24" height="24"
 							viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -20,7 +20,8 @@
 									<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
 									<polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Mi Perfil
 				</a></li>
-				<li class="nav-item"><a class="nav-link" id="usuario" onclick="activar(2)"
+				<li class="nav-item"><a class="nav-link ${param.menuActivo == 'usuario' ? 'active' : ''}"
+				 id="usuario" 
 					href="<%=request.getContextPath()%>/usuario/usuario.jsp"> <svg
 							xmlns="http://www.w3.org/2000/svg" width="24" height="24"
 							viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -30,7 +31,8 @@
 								d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
 									<polyline points="13 2 13 9 20 9"></polyline></svg> Usuario
 				</a></li>
-				<li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/usuario/rol.jsp"> <svg
+				<li class="nav-item"><a class="nav-link ${param.menuActivo == 'rol' ? 'active' : ''}"
+				 href="<%=request.getContextPath()%>/usuario/rol.jsp"> <svg
 							xmlns="http://www.w3.org/2000/svg" width="24" height="24"
 							viewBox="0 0 24 24" fill="none" stroke="currentColor"
 							stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -42,7 +44,8 @@
 								d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
 						Rol
 				</a></li>
-				<li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/usuario/persona.jsp"> <svg
+				<li class="nav-item"><a class="nav-link ${param.menuActivo == 'persona' ? 'active' : ''}"
+				href="<%=request.getContextPath()%>/usuario/persona.jsp"> <svg
 							xmlns="http://www.w3.org/2000/svg" width="24" height="24"
 							viewBox="0 0 24 24" fill="none" stroke="currentColor"
 							stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -53,7 +56,8 @@
 									<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
 									<path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> Personas
 				</a></li>
-				<li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/usuario/producto.jsp"> <svg
+				<li class="nav-item"><a class="nav-link ${param.menuActivo == 'producto' ? 'active' : ''}"
+				 href="<%=request.getContextPath()%>/usuario/producto.jsp"> <svg
 							xmlns="http://www.w3.org/2000/svg" width="24" height="24"
 							viewBox="0 0 24 24" fill="none" stroke="currentColor"
 							stroke-width="2" stroke-linecap="round" stroke-linejoin="round"

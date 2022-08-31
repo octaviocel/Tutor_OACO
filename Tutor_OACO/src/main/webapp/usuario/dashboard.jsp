@@ -21,10 +21,13 @@
 		<jsp:forward page="./login.jsp"></jsp:forward>
 	</c:if>
 	<jsp:include page="/componentes/headerPrivate.jsp"></jsp:include>
+
 	<div class="container-fluid">
 		<div class="row">
 
-			<jsp:include page="/componentes/menuLateral.jsp"></jsp:include>
+			<jsp:include page="/componentes/menuLateral.jsp">
+				<jsp:param name="menuActivo" value="dash" />
+			</jsp:include>
 
 			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 				<div class="chartjs-size-monitor">

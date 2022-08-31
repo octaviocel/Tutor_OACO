@@ -16,8 +16,10 @@
 		<jsp:forward page="./login.jsp"></jsp:forward>
 	</c:if>
 	<header
-		class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">
+		class="navbar navbar-dark sticky-top flex-md-nowrap p-0 shadow"
+		style="background-color: #6fc754;"
+		>
+		<a class="navbar-brand col-md-4 col-lg-3 me-0 px-4 fs-7"  href="#" style="color: black;">
 			<img alt="quebrado" class="rounded"
 			src="https://dthezntil550i.cloudfront.net/f4/latest/f41908291942413280009640715/1280_960/1b2d9510-d66d-43a2-971a-cfcbb600e7fe.png"
 			width="30px" height="35px"/>
@@ -32,7 +34,7 @@
 		</button>
 		<div class="navbar-nav">		
 			<div class="nav-item text-nowrap">
-				<a class="nav-link px-3"
+				<a class="nav-link px-3 fs-8" style="color: black;"
 					href="<%=request.getContextPath()%>/usuario/logout.jsp">Salir</a>
 			</div>
 		</div>

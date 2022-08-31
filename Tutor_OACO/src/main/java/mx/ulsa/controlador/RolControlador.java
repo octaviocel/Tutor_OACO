@@ -6,17 +6,22 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import mx.ulsa.modelo.Rol;
+
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 
-/**
- * Servlet implementation class RolControlador
- */
+
 public class RolControlador extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	private List<Rol> listaRoles;
+	
     public RolControlador() {
         super();
+        listaRoles = new ArrayList<Rol>();
     }
 
 
@@ -65,8 +70,15 @@ public class RolControlador extends HttpServlet {
 				dispatcher.forward(request, response);
 			}
 			else {
-				response.sendRedirect(request.getContextPath() + "/usuario/rol.jsp");
-
+				
+				Rol rolecito = new Rol(listaRoles.size()+1,parametroRol,parametroDes);
+				
+				listaRoles.add(rolecito);
+				HttpSession session = request.getSession();
+				synchronized (session) {
+					session.setAttribute("listaRoles", listaRoles);
+					response.sendRedirect(request.getContextPath() + "/usuario/rol.jsp");
+				}
 			}
 		} catch (Exception e) {
 			response.sendRedirect(request.getContextPath() + "/usuario/rol.jsp");
