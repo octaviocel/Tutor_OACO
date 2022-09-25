@@ -30,7 +30,7 @@
 						<p class="mb-0">Por favor rellena todos los campos</p>
 					</div>
 				</c:if>
-				
+
 				<div
 					class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 					<h1 class="h2">Registrar Usuario</h1>
@@ -56,6 +56,34 @@
 								</div>
 							</div>
 
+							<div class="mb-3 row">
+								<label for="persona" class="col-sm-2 col-form-label">Persona</label>
+								<div class="col-sm-10">
+									<select name="persona" >
+
+										<c:forEach var="plat" items="${listaPersonas}">
+											<option name="personaOption" value=" ${plat.getId()} "
+												>${plat.getNombre()} ${plat.getApePaterno()}</option>
+										</c:forEach>
+
+									</select>
+								</div>
+							</div>
+							
+							<div class="mb-3 row">
+								<label for="rol" class="col-sm-2 col-form-label">Rol</label>
+								<div class="col-sm-10">
+									<select name="rol" >
+
+										<c:forEach var="rol" items="${listaRoles}">
+											<option name="rolOption" value=" ${rol.getId()} "
+												>${rol.getNombres()}</option>
+										</c:forEach>
+
+									</select>
+								</div>
+							</div>
+
 							<div class="mb-3 form-check">
 								<input type="checkbox" class="form-check-input" name="status"
 									id="status"> <label class="form-check-label"
@@ -71,7 +99,7 @@
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-2">									
+								<div class="col-2">
 									<button class="btn btn-success" type="submit">Agregar</button>
 								</div>
 							</div>

@@ -15,16 +15,29 @@
 </head>
 <body class="img js-fullheight"
 	style="background-image: url(../images/hero.jpg); display: flex; align-content: center; justify-content: center;">
+	<%@ page errorPage="/erroPage.jsp"%>
 	<div style="justify-content: center; align-self: center;">
 		<div class="form-v10-content">
-			<form class="form-detail" action="<%=request.getContextPath()%>/Usuario/registrar" method="post" id="myform">
+			<c:if test="${msgError != null}">
+				<div class="alert alert-danger" role="alert">
+					<h4 class="alert-heading">Errores!</h4>
+					<p>${msgError}</p>
+					<hr>
+					<p class="mb-0">Error al registrar</p>
+				</div>
+			</c:if>
+			<form class="form-detail"
+				action="<%=request.getContextPath()%>/Usuario/registrar"
+				method="post" id="myform">
 				<div class="form-left">
 					<h2 style="color: #6fc754;">Informaci&oacute;n General</h2>
+					<!--
 					<div class="form-row">
 						<input type="text" name="nombre" id="first_name"
 							class="input-text" placeholder="Nombre (s)" required>
 					</div>
 					<div class="form-group">
+					
 						<div class="form-row form-row-1">
 							<input type="text" name="apePaterno" id="first_name"
 								class="input-text" placeholder="Apellido Paterno" required>
@@ -33,7 +46,9 @@
 							<input type="text" name="apeMaterno" id="last_name"
 								class="input-text" placeholder="Apellido Materno" required>
 						</div>
+						
 					</div>
+					-->
 					<div class="form-row">
 						<input type="email" name="correo" class="input-text" id="company"
 							placeholder="Correo" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
@@ -44,6 +59,7 @@
 							id="company" placeholder="Contrase&ntilde;a" required>
 
 					</div>
+					<!--
 					<div class="form-group">
 						<div class="form-row form-row-3">
 							<input type="text" name="telefono" class="input-text"
@@ -56,15 +72,17 @@
 						</div>
 
 					</div>
-					<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+					-->
+					<br /> <br /> <br /> <br />
 					<div class="form-row">
 						<a href="<%=request.getContextPath()%>/index.jsp"> Regresar
 							Inicio</a>
 					</div>
 				</div>
 				<div class="form-right" style="background-color: #6fc754;">
-					<h2>Detalles</h2>
-					<div class="form-row">
+					<h2>Click en Registrar</h2>
+					<h2>${msgErroRegistro}</h2>
+					<!-- <div class="form-row">
 						<input type="text" name="calle" class="street" id="street"
 							placeholder="Calle" required>
 					</div>
@@ -108,6 +126,7 @@
 								Conditions of your site.</p> <input type="checkbox" name="checkbox">
 							<span class="checkmark"></span> </label>
 					</div>
+					 -->
 					<div class="form-row-last">
 						<input type="submit" name="register" class="register"
 							value="Registrarse">

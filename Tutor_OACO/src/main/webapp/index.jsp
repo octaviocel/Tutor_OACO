@@ -42,6 +42,9 @@
 <link href="css/cssTemplate/responsive.css" rel="stylesheet">
 </head>
 <body>
+
+	<%@ page errorPage="/erroPage.jsp"%>
+
 	<jsp:include page="/componentes/headerPublico.jsp"></jsp:include>
 
 	<div id="hero" class="hero overlay">
@@ -49,7 +52,8 @@
 			<div class="hero-text">
 				<h1>El comienzo con JSP.</h1>
 				<p>El primer proyecto creado en JSP. Dynamic Web Project .</p>
-				<a href="<%=request.getContextPath()%>/usuario/login.jsp" class="btn btn-border">Iniciar sesi&oacute;n</a>
+				<a href="<%=request.getContextPath()%>/usuario/login.jsp"
+					class="btn btn-border">Iniciar sesi&oacute;n</a>
 			</div>
 			<!-- /.hero-text -->
 		</div>
@@ -64,13 +68,15 @@
 				<div class="row">
 					<div class="col-sm-5">
 						<h2>JSP</h2>
-						<p>La tecnolog&iacute;a JavaServer Pages permite generar contenido Web 
-						din&aacute;mico como, por ejemplo, archivos HTML, DHTML, XHTML y XML, 
-						para incluirlos en una aplicaci&oacute;n Web. Los archivos JSP son una 
-						forma de implementar contenido de p&aacute;ginas din&aacute;mico del lado del 
-						servidor. Los archivos JSP permiten a un servidor Web como, por ejemplo, 
-						Apache Tomcat, a&ntilde;adir contenido din&aacute;micamente a las p&aacute;ginas HTML antes de 
-						enviarlas al navegador que las solicita.</p>
+						<p>La tecnolog&iacute;a JavaServer Pages permite generar
+							contenido Web din&aacute;mico como, por ejemplo, archivos HTML,
+							DHTML, XHTML y XML, para incluirlos en una aplicaci&oacute;n Web.
+							Los archivos JSP son una forma de implementar contenido de
+							p&aacute;ginas din&aacute;mico del lado del servidor. Los
+							archivos JSP permiten a un servidor Web como, por ejemplo, Apache
+							Tomcat, a&ntilde;adir contenido din&aacute;micamente a las
+							p&aacute;ginas HTML antes de enviarlas al navegador que las
+							solicita.</p>
 					</div>
 					<div class="col-sm-7 hidden-xs">
 						<img src="images/ipad-pro.png" alt="">
@@ -86,7 +92,8 @@
 			<div class="container">
 				<h2>Laboratorio de Programaci&oacute;n para Servidores Web</h2>
 				<p>Docente: Harim Altamirano Castellanos.</p>
-				<a href="<%=request.getContextPath()%>/usuario/registrar.jsp" class="btn btn-fill">Registrate</a>
+				<a href="<%=request.getContextPath()%>/usuario/registrar.jsp"
+					class="btn btn-fill">Registrate</a>
 				<div class="row">
 					<div class="col-sm-3 col-xs-6">
 						<div class="counter-item">
@@ -165,7 +172,7 @@
 					</ul>
 				</div>
 				<div class="clearfix visible-xs"></div>
-				
+
 			</div>
 		</div>
 		<div class="copyright">
@@ -173,9 +180,12 @@
 				<div class="row">
 					<div class="col-xs-8">
 						<div class="social-links">
-							<a class="twitter-bg" href="www.twitter.com"><i class="fa fa-twitter"></i></a>
-							<a class="facebook-bg" href="www.facebook.com"><i class="fa fa-facebook"></i></a>
-							<a class="linkedin-bg" href="https://www.linkedin.com/in/octavio-celaya-ojeda-246a3a1b5/"><i class="fa fa-linkedin"></i></a>
+							<a class="twitter-bg" href="www.twitter.com"><i
+								class="fa fa-twitter"></i></a> <a class="facebook-bg"
+								href="www.facebook.com"><i class="fa fa-facebook"></i></a> <a
+								class="linkedin-bg"
+								href="https://www.linkedin.com/in/octavio-celaya-ojeda-246a3a1b5/"><i
+								class="fa fa-linkedin"></i></a>
 						</div>
 						<!-- /.social-links -->
 					</div>

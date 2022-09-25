@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Registrar Usuarios</title>
+<title>Registrar Rol</title>
 <jsp:include page="/componentes/bootstrap.jsp"></jsp:include>
 <link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/css/dashboard.css">

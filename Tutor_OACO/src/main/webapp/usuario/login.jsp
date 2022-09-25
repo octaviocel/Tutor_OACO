@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,11 +18,15 @@
 </head>
 <body class="img js-fullheight"
 	style="background-image: url(../images/hero.jpg);">
+	<%@ page errorPage="/erroPage.jsp"%>
 	<section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section"><a href="<%=request.getContextPath()%>/index.jsp" style="color: #6fc754;"> Ir a Inicio</a></h2>
+					<h2 class="heading-section">
+						<a href="<%=request.getContextPath()%>/index.jsp"
+							style="color: #6fc754;"> Ir a Inicio</a>
+					</h2>
 				</div>
 			</div>
 			<div class="row justify-content-center">
@@ -28,29 +34,37 @@
 					<div class="login-wrap p-0">
 						<h3 class="mb-4 text-center">Tienes Cuenta?</h3>
 						<form action="<%=request.getContextPath()%>/Usuario/login"
-						method="post" class="signin-form">
+							method="post" class="signin-form">
 							<div class="form-group">
 								<input type="text" class="form-control" placeholder="Username"
-									name="correo"
-									required>
+									name="correo" required>
 							</div>
 							<div class="form-group">
 								<input id="password-field" type="password" class="form-control"
-									name="contrasenia"
-									placeholder="Password" required> <span
+									name="contrasenia" placeholder="Password" required> <span
 									toggle="#password-field"
 									class="fa fa-fw fa-eye field-icon toggle-password"></span>
 							</div>
-							<div class="form-group" >
-								<button type="submit"
-									class="form-control btn  submit px-3" style="background: #6fc754;">Sign
-									In</button>
+							<div class="form-group">
+								<button type="submit" class="form-control btn  submit px-3"
+									style="background: #6fc754;">Sign In</button>
 							</div>
+
+							<c:if test="${msgErrorLogin != null}">
+								<div style="align-content: center; align-items: center;">
+									<span class="badge rounded-pill bg-danger"> <i
+										class="fa fa-exclamation-triangle" aria-hidden="true"></i> <c:out
+											value="${msgErrorLogin}" />
+									</span>
+								</div>
+							</c:if>
+
 							<div class="form-group d-md-flex">
 								<div class="w-50">
-									<label class="checkbox-wrap checkbox-primary" style="color: #6fc754;">Remember
-										Me <input type="checkbox" checked style="background-color: #6fc754;"> <span
-										class="checkmark" ></span>
+									<label class="checkbox-wrap checkbox-primary"
+										style="color: #6fc754;">Remember Me <input
+										type="checkbox" checked style="background-color: #6fc754;">
+										<span class="checkmark"></span>
 									</label>
 								</div>
 								<div class="w-50 text-md-right">
@@ -66,10 +80,13 @@
 								class="fa fa-twitter mr-2"></span> Twitter</a>
 						</div>
 						<br />
-						<p class="w-100 text-center">&mdash; No tienes cuenta Registrate &mdash;</p>
+						<p class="w-100 text-center">&mdash; No tienes cuenta
+							Registrate &mdash;</p>
 						<div class="social d-flex text-center">
-							<a href="<%=request.getContextPath()%>/usuario/registrar.jsp" style="background-color: #6fc754;" class="px-2 py-2 mr-md-1 rounded"><span
-								class=" mr-2"></span> Registrarme</a>
+							<a href="<%=request.getContextPath()%>/usuario/registrar.jsp"
+								style="background-color: #6fc754;"
+								class="px-2 py-2 mr-md-1 rounded"><span class=" mr-2"></span>
+								Registrarme</a>
 						</div>
 					</div>
 				</div>

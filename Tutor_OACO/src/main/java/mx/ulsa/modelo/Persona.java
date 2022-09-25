@@ -2,24 +2,49 @@ package mx.ulsa.modelo;
 
 import java.sql.Date;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="persona")
 public class Persona {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id")
 	private Integer id;
 
+	@Column(name="nombre")
 	private String nombre;
 	
+	@Column(name="apePaterno")
 	private String apePaterno;
 	
+	@Column(name="apeMaterno")
 	private String apeMaterno;
 	
+	@Column(name="edad")
 	private Integer edad;
 	
+	@Column(name="telefono")
 	private String telefono;
 	
+	@Column(name="rfc")
 	private String rfc;
 	
+	@Column(name="fechaNac")
 	private Date fechaNac;
-	
+
+	@Column(name="domicilio")
 	private String domicilio;
+	
+	
 	
 	public Persona() {
 		
@@ -38,6 +63,20 @@ public class Persona {
 		this.fechaNac = fechaNac;
 		this.domicilio = domicilio;
 	}
+	public Persona(String nombre, String apePaterno, String apeMaterno, Integer edad, String telefono,
+			String rfc, Date fechaNac, String domicilio) {
+		super();
+		this.nombre = nombre;
+		this.apePaterno = apePaterno;
+		this.apeMaterno = apeMaterno;
+		this.edad = edad;
+		this.telefono = telefono;
+		this.rfc = rfc;
+		this.fechaNac = fechaNac;
+		this.domicilio = domicilio;
+	}
+	
+	
 
 	public Integer getId() {
 		return id;
@@ -109,6 +148,13 @@ public class Persona {
 
 	public void setDomicilio(String domicilio) {
 		this.domicilio = domicilio;
+	}
+	
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString();
 	}
 
 	

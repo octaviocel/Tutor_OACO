@@ -37,7 +37,7 @@
 				</div>
 				<div class="row">
 					<div class="col-10">
-						<form action="<%=request.getContextPath()%>/Producto/registrar">
+						<form enctype="multipart/form-data" method="post" action="<%=request.getContextPath()%>/Producto/registrar" > <!-- multipart/mixed stream -->
 							<div class="mb-3">
 								<label for="nombre" class="form-label">Nombre (s) </label> <input
 									type="text" class="form-control" name="nombre" id="nombre">
@@ -49,11 +49,11 @@
 							</div>
 							<div class="mb-3">
 								<label for="precio" class="form-label">Precio </label> <input
-									type="number" class="form-control" name="precio" id="precio">
+									type="number" step="0.01" class="form-control" name="precio" id="precio">
 							</div>
 							<div class="mb-3">
 								<label for="image" class="form-label">Imagen </label> <input
-									type="file" class="form-control" name="image" id="image">
+									type="file" class="form-control" accept="image/*" name="image" id="image">
 							</div>
 							<div class="mb-3">
 								<label for="numExis" class="form-label">N&uacute;mero de

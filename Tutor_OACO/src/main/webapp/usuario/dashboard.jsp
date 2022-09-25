@@ -17,6 +17,7 @@
 	<%
 	Usuario usuario = (Usuario) request.getSession().getAttribute("usuario");
 	%>
+	<%@ page errorPage="/erroPage.jsp"%>
 	<c:if test="${usuario == null}">
 		<jsp:forward page="./login.jsp"></jsp:forward>
 	</c:if>

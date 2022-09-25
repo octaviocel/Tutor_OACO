@@ -22,7 +22,7 @@
 				</a></li>
 				<li class="nav-item"><a class="nav-link ${param.menuActivo == 'usuario' ? 'active' : ''}"
 				 id="usuario" 
-					href="<%=request.getContextPath()%>/usuario/usuario.jsp"> <svg
+					href="<%=request.getContextPath()%>/Usuario/listarUsuarios"> <svg
 							xmlns="http://www.w3.org/2000/svg" width="24" height="24"
 							viewBox="0 0 24 24" fill="none" stroke="currentColor"
 							stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -32,7 +32,7 @@
 									<polyline points="13 2 13 9 20 9"></polyline></svg> Usuario
 				</a></li>
 				<li class="nav-item"><a class="nav-link ${param.menuActivo == 'rol' ? 'active' : ''}"
-				 href="<%=request.getContextPath()%>/usuario/rol.jsp"> <svg
+				 href="<%=request.getContextPath()%>/Rol/listarRol"> <svg
 							xmlns="http://www.w3.org/2000/svg" width="24" height="24"
 							viewBox="0 0 24 24" fill="none" stroke="currentColor"
 							stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -45,7 +45,7 @@
 						Rol
 				</a></li>
 				<li class="nav-item"><a class="nav-link ${param.menuActivo == 'persona' ? 'active' : ''}"
-				href="<%=request.getContextPath()%>/usuario/persona.jsp"> <svg
+				href="<%=request.getContextPath()%>/Persona/listarPersona"> <svg
 							xmlns="http://www.w3.org/2000/svg" width="24" height="24"
 							viewBox="0 0 24 24" fill="none" stroke="currentColor"
 							stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -57,7 +57,7 @@
 									<path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> Personas
 				</a></li>
 				<li class="nav-item"><a class="nav-link ${param.menuActivo == 'producto' ? 'active' : ''}"
-				 href="<%=request.getContextPath()%>/usuario/producto.jsp"> <svg
+				 href="<%=request.getContextPath()%>/Producto/listarProducto"> <svg
 							xmlns="http://www.w3.org/2000/svg" width="24" height="24"
 							viewBox="0 0 24 24" fill="none" stroke="currentColor"
 							stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
